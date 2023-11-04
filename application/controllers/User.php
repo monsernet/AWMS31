@@ -541,6 +541,27 @@ class User extends CI_Controller {
       redirect('users/list');
 	}
 	
+	//EDIT PRODUCT
+	public function editUser($id)
+	{
+    if (!$this->global_model->itemExist('users', 'id', $id)) {
+		$this->session->set_flashdata('usernotexist', '<div class="alert alert-danger"> '.$this->lang->line('user_not_exist').'</div>');
+		redirect('users');
+	} else {		
+	
+	$data['title'] = $this->lang->line('edit_user');
+	$data['user'] = $this->db->where(['id' => $id])->get('users')->row();
+    $data['user_types'] = $this->global_model->RetreiveData('user_types','');
+	$data['warehouses'] = $this->global_model->RetreiveData('warehouses','');
+	$data['applicationRow'] = $this->global_model->RetreiveRow('application_settings', ['id' => 1]);
+    $this->load->view('inc/header',$data);
+	$this->load->view('inc/topheader',$data);
+	$this->load->view('inc/sidebar');
+	$this->load->view('users/edit');
+	$this->load->view('inc/footer');
+	}
+  }
+	
 	
  
 }

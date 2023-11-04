@@ -1039,6 +1039,7 @@ $lang['user_management'] = 'User Management ';
 $lang['users'] = 'Users '; 
 $lang['new_user'] = 'New User '; 
 $lang['edit_user'] = 'Edit User '; 
+$lang['update_user'] = ' Update User '; 
 $lang['user_roles'] = 'User Roles '; 
 $lang['list_of_users'] = 'List of Users '; 
 $lang['banned_users'] = 'Banned Users '; 
@@ -1057,6 +1058,8 @@ $lang['user_login_details'] = 'User Login Details ';
 $lang['user_type_name_empty'] = ' The User Type Name should not be empty !! '; 
 $lang['save_new_user'] = ' Save New User '; 
 $lang['new_user_added_success'] = 'New User added successfully ';
+$lang['alert_keep_password_empty'] = ' Keep the password empty if you do not want to change it'; 
+$lang['user_not_exist'] = 'The User you try to edit does not exist !!'; 
 
 
 

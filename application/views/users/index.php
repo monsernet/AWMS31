@@ -80,10 +80,9 @@
 												<td><?php echo $user->user_type; ?></td>
 												<td><?php echo $user->registerDate; ?></td>
 												<td class="btn-group">
-													<form method="post" action="<?php echo base_url();?>user/edit">
-													<input type="hidden" name="users_userId" id="users_userId<?php echo $ct;?>" value="<?php echo $user->id;?>">
-													<button type="submit" class="btn btn-sm btn-primary mr-1" title="<?php echo $this->lang->line('edit_user'); ?>"><i class="fa fa-edit"></i></button>
-													</form>
+													
+													<a href="<?php echo base_url();?>users/edit/<?php echo $user->id;?>" class="btn btn-sm btn-primary mr-1" title="<?php echo $this->lang->line('edit_user'); ?>"><i class="fa fa-edit"></i></a>
+													
 													<a href="<?php echo base_url();?>user/roles/<?php echo $user->id;?>" class="btn btn-sm btn-secondary mr-1"><i class="fa fa-vcard-o"></i></a>
 													<!-- IF CUSTOMER STATUS =1 => DISPLAY BUTTON TO ACTIVATE -->
 													<?php if ($user->status==1) { ?>

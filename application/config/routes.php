@@ -160,6 +160,7 @@ $route['help/google-recaptcha'] = 'help/google_recaptcha';
 /****** USER MANAGEMENT *******/
 $route['users/list'] = 'user/userList';
 $route['users/new'] = 'user/createuser';
+$route['users/edit/(:num)'] = 'user/edituser/$1';
 $route['users/roles'] = 'user/userroles';
 
 
