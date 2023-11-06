@@ -36,7 +36,11 @@
 									<?php echo $this->session->flashdata('updatesuccess'); ?>
 									<?php echo $this->session->flashdata('usernotexist'); ?>
 									<?php echo $this->session->flashdata('userbanned'); ?>
+
 									<table id="fixedHeader" class="table custom-table userTable">
+
+									<table id="fixedHeader" class="table custom-table productTable">
+
 										<thead>
 											<tr>
 												
@@ -76,14 +80,27 @@
 												<td><?php echo $user->username; ?></td>
 												<td><?php echo $user->email; ?></td>
 												<td><?php echo ($user->status==1) ? '<span class="text-success"><i class="fa fa-check-circle"></i> '.$this->lang->line("active").'</span>' : '<span class="text-danger"><i class="fa fa-times-circle"></i> '.$this->lang->line("banned").'</span>'; ?></td>
+
+													<p class="m-0 font-size-14"><i><?php //echo $product->product_barcode; ?></i></p>
+												</td>
+												<td><?php echo $user->username; ?></td>
+												<td><?php echo $user->email; ?></td>
+												<td><?php echo ($user->status==1) ? '<span class="text-success"><i class="fa fa-check-circle"></i> Active</span>' : '<span class="text-danger"><i class="fa fa-times-circle"></i> Inactive</span>'; ?></td>
+
 												<td><?php echo $user->user_type; ?></td>
 												<td><?php echo $user->registerDate; ?></td>
 												<td class="btn-group">
 													
 													<a href="<?php echo base_url();?>users/edit/<?php echo $user->id;?>" class="btn btn-sm btn-primary mr-1" title="<?php echo $this->lang->line('edit_user'); ?>"><i class="fa fa-edit"></i></a>
+
 													<input type="hidden" name="users_userId" id="users_userId<?php echo $ct;?>" value="<?php echo $user->id;?>">
 													<a href="<?php echo base_url();?>user/roles/<?php echo $user->id;?>" class="btn btn-sm btn-secondary mr-1"><i class="fa fa-vcard-o"></i></a>
 													<!-- IF USER STATUS =1 => DISPLAY BUTTON TO ACTIVATE -->
+
+													
+													<a href="<?php echo base_url();?>user/roles/<?php echo $user->id;?>" class="btn btn-sm btn-secondary mr-1"><i class="fa fa-vcard-o"></i></a>
+													<!-- IF CUSTOMER STATUS =1 => DISPLAY BUTTON TO ACTIVATE -->
+
 													<?php if ($user->status==1) { ?>
 													<button type="button" name="deactivateUser" id="deactivateUser" class="btn btn-sm btn-success user_action" title="<?php echo $this->lang->line('block_user'); ?>"><i class="fa fa-toggle-on"></i></button>
 													<?php } else { ?>

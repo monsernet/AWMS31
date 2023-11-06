@@ -167,6 +167,5 @@ $route['users/banned'] = 'user/bannedusers';
 
 
 
-
 $route['404_override'] = 'customError404/index';
 $route['translate_uri_dashes'] = FALSE;

@@ -1958,7 +1958,26 @@ $(document).ready(function(){
 					});
 					
 				}
+<<<<<<< HEAD
 				
+=======
+				//check if all checked items are saved 
+				/*if (nbChecked.length > parseInt($("#DelSavedItems").val())) {
+					//some storage locations are not saved 
+					//alert(ALERT_MISSING_ITEMS_TRANSFER_PICKUP);
+					Swal.fire({
+						title: ALERT_alert,
+						text: ALERT_MISSING_ITEMS_TRANSFER_PICKUP,
+						icon: "warning",
+						button: "OK",
+						allowEscapeKey: false,
+						allowEnterKey: false,
+						allowOutsideClick: false,
+					});
+				} else {*/
+					//product picked up successfully
+					//alert(ALERT_PRODUCT_PICKEDUP_SUCCESS);
+>>>>>>> 8bbe38e0974ee1c70fbf9b250d739d4e71f9f55b
 					Swal.fire({
 						title: ALERT_success,
 						text: ALERT_PRODUCT_PICKEDUP_SUCCESS,
@@ -3298,7 +3317,10 @@ $(document).ready(function(){
 			
 	// ADD NEW USER TYPE FROM USER CREATING PAGE
    
+
 	/*$('#newUserTypeSave').click(function() {
+
+	$('#newUserTypeSave').click(function() {
 		
 		alert("OK");
 		var userTypeName = $("#newUserTypeName").val();
@@ -3334,7 +3356,11 @@ $(document).ready(function(){
 					if(result) {
 						alert(ALERT_US_TYP_ADDED_SUCCESS);
 						$('#addNewUserTypeModal').modal('hide');
+
 						//loadSelectOptions("#new_user_user_type", "user_types", "id", "user_type");
+
+						loadSelectOptions("#new_user_user_type", "user_types", "id", "user_type");
+
 					} else {
 						alert("error occurred");
 					}
@@ -3345,6 +3371,7 @@ $(document).ready(function(){
 				}
 			});
 		
+
 	});*/
 	
 	//ENABLE / DISABLE USER
@@ -3377,6 +3404,7 @@ $(document).ready(function(){
 				});
 			}
 		
+
 	});
 	
 	
